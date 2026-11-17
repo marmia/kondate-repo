@@ -221,7 +221,7 @@
     <script>
       "use strict";
 
-      /* ===== 献立データ（2026年11月17日時点） ===== */
+      /* ===== 献立データ（2026年11月18日時点） ===== */
       var MENUS = {
         "2026-10-27": { items: [
           { name: "長ねぎと豚肉のオイバター炒め", role: "main" },
@@ -278,8 +278,8 @@
         ] },
         "2026-11-18": { items: [
           { name: "中華風野菜炒め", role: "main" },
-          { name: "春雨の中華風サラダ", role: "side" },
-          { name: "豆腐とえのきのスープ", role: "side" }
+          { name: "かぼちゃの煮物", role: "side" },
+          { name: "たまご豆腐", role: "side" }
         ] },
         "2026-11-19": { items: [
           { name: "親子丼", role: "main" },
@@ -337,6 +337,12 @@
   },
   "春雨の中華風サラダ": {
     "img": "img/257.jpg"
+  },
+  "かぼちゃの煮物": {
+    "img": "img/24.jpg"
+  },
+  "たまご豆腐": {
+    "img": "img/69.jpg"
   },
   "ほうれん草のごま和え": {
     "img": "img/91.jpg"
@@ -399,11 +405,13 @@
   "じゃがいもとピーマンのピリ辛炒め": "recipes/61.html",
   "大根おろし": "recipes/235.html",
   "中華風野菜炒め": "recipes/198.html",
-  "春雨の中華風サラダ": "recipes/257.html",
-  "豆腐とえのきのスープ": "recipes/318.html",
+  "かぼちゃの煮物": "recipes/24.html",
+  "たまご豆腐": "recipes/69.html",
   "親子丼": "recipes/399.html",
   "ほうれん草のごま和え": "recipes/91.html",
   "切り干し大根でサラダ": "recipes/206.html",
+  "春雨の中華風サラダ": "recipes/257.html",
+  "豆腐とえのきのスープ": "recipes/318.html",
   "さつまいもの煮物": "recipes/52.html"
 };
 
@@ -527,7 +535,7 @@
           '<span class="mc-sub">' + p.y + "年" + p.m + '月の献立をカレンダーで見られます</span>' +
           '<span class="mc-arrow">カレンダーを開く ›</span></button>';
         html += "</div>";
-        html += '<p class="snapshot-note">このページは2026年11月17日時点の献立を表示しています。11月19日（木）までの献立が入っています。</p>';
+        html += '<p class="snapshot-note">このページは2026年11月18日時点の献立を表示しています。11月19日（木）までの献立が入っています。</p>';
         app.innerHTML = html;
       }
 
