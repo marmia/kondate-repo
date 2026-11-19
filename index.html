@@ -221,7 +221,7 @@
     <script>
       "use strict";
 
-      /* ===== 献立データ（2026年11月18日時点） ===== */
+      /* ===== 献立データ（2026年11月20日時点） ===== */
       var MENUS = {
         "2026-10-27": { items: [
           { name: "長ねぎと豚肉のオイバター炒め", role: "main" },
@@ -285,6 +285,22 @@
           { name: "親子丼", role: "main" },
           { name: "えのきとわかめの味噌汁", role: "side" },
           { name: "ほうれん草のごま和え", role: "side" }
+        ] },
+        "2026-11-20": { items: [
+          { name: "きのこ鍋", role: "main" },
+          { name: "冷奴", role: "side" },
+          { name: "たたき梅きゅうり", role: "side" }
+        ] },
+        "2026-11-21": { items: [
+          { name: "ハンバーグ濃厚デミグラスソース", role: "main" },
+          { name: "基本のポテトサラダ", role: "side" },
+          { name: "じゃがいものコンソメスープ", role: "side" }
+        ] },
+        "2026-11-22": { items: [
+          { name: "チキン南蛮", role: "main" },
+          { name: "さしみこんにゃく", role: "side" },
+          { name: "コールスローサラダ", role: "side" },
+          { name: "茶碗蒸し", role: "side" }
         ] }
       };
 
@@ -353,29 +369,41 @@
   "親子丼": {
     "img": "img/399.webp"
   },
-  "長ねぎと豚肉のオイバター炒め": {
-    "img": "img/360.jpg"
-  },
-  "じゃがいものコンソメスープ": {
-    "img": "img/63.jpg"
-  },
-  "すき焼き": {
-    "img": "img/65.jpg"
-  },
-  "茶碗蒸し": {
-    "img": "img/312.jpg"
-  },
-  "さつまいもの煮物": {
-    "img": "img/52.jpg"
+  "きのこ鍋": {
+    "img": "img/37.jpg"
   },
   "冷奴": {
     "img": "img/205.jpg"
   },
-  "カレーライス": {
-    "img": "img/119.jpg"
+  "ハンバーグ濃厚デミグラスソース": {
+    "img": "img/173.jpg"
+  },
+  "じゃがいものコンソメスープ": {
+    "img": "img/63.jpg"
+  },
+  "チキン南蛮": {
+    "img": "img/401.jpg"
   },
   "さしみこんにゃく": {
     "img": "img/48.jpg"
+  },
+  "コールスローサラダ": {
+    "img": "img/131.jpg"
+  },
+  "茶碗蒸し": {
+    "img": "img/312.jpg"
+  },
+  "長ねぎと豚肉のオイバター炒め": {
+    "img": "img/360.jpg"
+  },
+  "すき焼き": {
+    "img": "img/65.jpg"
+  },
+  "さつまいもの煮物": {
+    "img": "img/52.jpg"
+  },
+  "カレーライス": {
+    "img": "img/119.jpg"
   },
   "野菜サラダ": {
     "img": "img/354.jpg"
@@ -409,6 +437,10 @@
   "たまご豆腐": "recipes/69.html",
   "親子丼": "recipes/399.html",
   "ほうれん草のごま和え": "recipes/91.html",
+  "きのこ鍋": "recipes/37.html",
+  "ハンバーグ濃厚デミグラスソース": "recipes/173.html",
+  "チキン南蛮": "recipes/401.html",
+  "コールスローサラダ": "recipes/131.html",
   "切り干し大根でサラダ": "recipes/206.html",
   "春雨の中華風サラダ": "recipes/257.html",
   "豆腐とえのきのスープ": "recipes/318.html",
@@ -535,7 +567,7 @@
           '<span class="mc-sub">' + p.y + "年" + p.m + '月の献立をカレンダーで見られます</span>' +
           '<span class="mc-arrow">カレンダーを開く ›</span></button>';
         html += "</div>";
-        html += '<p class="snapshot-note">このページは2026年11月18日時点の献立を表示しています。11月19日（木）までの献立が入っています。</p>';
+        html += '<p class="snapshot-note">このページは2026年11月20日時点の献立を表示しています。11月22日（日）までの献立が入っています。</p>';
         app.innerHTML = html;
       }
 
@@ -636,6 +668,15 @@
             }).join("") + "</tbody></table>";
           html += '<h2 class="sec-head">作り方</h2><ol class="steps">' +
             r.steps.map(function (s) { return "<li>" + esc(s) + "</li>"; }).join("") + "</ol>";
+          if (r.sourceUrl) {
+            html += '<p class="source-line">出典：<a href="' + r.sourceUrl + '" target="_blank" rel="noopener">' + esc(r.sourceName) + "のレシピを見る</a></p>";
+          }
+        } else if (r.ingredients) {
+          html += '<h2 class="sec-head">材料</h2><table class="ingredients"><tbody>' +
+            r.ingredients.map(function (row) {
+              return "<tr><td>" + esc(row[0]) + '</td><td class="amount">' + esc(row[1]) + "</td></tr>";
+            }).join("") + "</tbody></table>";
+          html += '<div class="pending-box" style="margin-top:20px;">作り方の手順は、出典の動画をご覧ください。</div>';
           if (r.sourceUrl) {
             html += '<p class="source-line">出典：<a href="' + r.sourceUrl + '" target="_blank" rel="noopener">' + esc(r.sourceName) + "のレシピを見る</a></p>";
           }
