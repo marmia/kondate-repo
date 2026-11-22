@@ -221,7 +221,7 @@
     <script>
       "use strict";
 
-      /* ===== 献立データ（2026年11月20日時点） ===== */
+      /* ===== 献立データ（2026年11月23日時点） ===== */
       var MENUS = {
         "2026-10-27": { items: [
           { name: "長ねぎと豚肉のオイバター炒め", role: "main" },
@@ -300,6 +300,18 @@
           { name: "さばの塩焼き", role: "main" },
           { name: "コールスローサラダ", role: "side" },
           { name: "茶碗蒸し", role: "side" }
+        ] },
+        "2026-11-23": { items: [
+          { name: "豚肉の生姜焼き", role: "main" },
+          { name: "かぼちゃの煮物", role: "side" },
+          { name: "野菜サラダ", role: "side" },
+          { name: "豆腐とえのきのスープ", role: "side" }
+        ] },
+        "2026-11-24": { items: [
+          { name: "鶏肉と長ねぎの甘辛炒め", role: "main" },
+          { name: "大根おろし", role: "side" },
+          { name: "えのきとわかめの味噌汁", role: "side" },
+          { name: "たまご豆腐", role: "side" }
         ] }
       };
 
@@ -401,6 +413,15 @@
   "さばの塩焼き": {
     "img": "img/54.jpg"
   },
+  "豚肉の生姜焼き": {
+    "img": "img/341.jpg"
+  },
+  "鶏肉と長ねぎの甘辛炒め": {
+    "img": "img/391.jpg"
+  },
+  "野菜サラダ": {
+    "img": "img/354.jpg"
+  },
   "長ねぎと豚肉のオイバター炒め": {
     "img": "img/360.jpg"
   },
@@ -412,9 +433,6 @@
   },
   "カレーライス": {
     "img": "img/119.jpg"
-  },
-  "野菜サラダ": {
-    "img": "img/354.jpg"
   }
 };
 
@@ -450,9 +468,11 @@
   "ハンバーグ濃厚デミグラスソース": "recipes/173.html",
   "さばの塩焼き": "recipes/54.html",
   "コールスローサラダ": "recipes/131.html",
+  "豚肉の生姜焼き": "recipes/341.html",
+  "豆腐とえのきのスープ": "recipes/318.html",
+  "鶏肉と長ねぎの甘辛炒め": "recipes/391.html",
   "切り干し大根でサラダ": "recipes/206.html",
   "春雨の中華風サラダ": "recipes/257.html",
-  "豆腐とえのきのスープ": "recipes/318.html",
   "きのこ鍋": "recipes/37.html",
   "チキン南蛮": "recipes/401.html",
   "さつまいもの煮物": "recipes/52.html"
@@ -578,7 +598,7 @@
           '<span class="mc-sub">' + p.y + "年" + p.m + '月の献立をカレンダーで見られます</span>' +
           '<span class="mc-arrow">カレンダーを開く ›</span></button>';
         html += "</div>";
-        html += '<p class="snapshot-note">このページは2026年11月20日時点の献立を表示しています。11月22日（日）までの献立が入っています。</p>';
+        html += '<p class="snapshot-note">このページは2026年11月23日時点の献立を表示しています。11月24日（火）までの献立が入っています。</p>';
         app.innerHTML = html;
       }
 
