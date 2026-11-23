@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:," />
+    <title>大根ときゅうりとハムのおかか和風サラダ｜家族用献立ページ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Maru+Gothic:wght@700;900&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #ffffff;
+        --surface: #ffffff;
+        --surface-soft: #f4f6f1;
+        --ink: #2b2620;
+        --ink-soft: #6d6459;
+        --line: #e3ddd2;
+        --green: #33684a;
+        --green-deep: #26513a;
+        --green-tint: #e7f0e8;
+        --persimmon: #bc5227;
+        --persimmon-tint: #faeee7;
+        --sun: #c0392b;
+        --shadow: 0 2px 10px rgba(60, 48, 32, 0.08);
+        --radius: 18px;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          color-scheme: dark;
+          --bg: #1c1916;
+          --surface: #26221e;
+          --surface-soft: #2c2823;
+          --ink: #f3eee6;
+          --ink-soft: #b8ad9e;
+          --line: #453e35;
+          --green: #8fc7a2;
+          --green-deep: #a9d8ba;
+          --green-tint: #2b3d31;
+          --persimmon: #e08a5f;
+          --persimmon-tint: #42322a;
+          --sun: #e88a7d;
+          --shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+        }
+      }
+      * { box-sizing: border-box; }
+      html { -webkit-text-size-adjust: 100%; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+        font-size: 17px;
+        line-height: 1.65;
+      }
+      button { font: inherit; color: inherit; background: none; border: none; cursor: pointer; }
+      img { display: block; max-width: 100%; }
+      .wrap { max-width: 680px; margin: 0 auto; padding: 20px 16px 48px; }
+
+      h1, h2, h3 { font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif; line-height: 1.35; margin: 0; }
+
+      /* ---------- home ---------- */
+      .today-line { font-size: 1.05rem; color: var(--ink-soft); font-weight: 500; }
+      .today-big { font-size: 2rem; font-weight: 900; font-family: "Zen Maru Gothic", sans-serif; margin: 2px 0 6px; }
+      .today-big .dow { font-size: 1.25rem; color: var(--green); }
+      .home-lead { color: var(--ink-soft); margin: 0 0 22px; }
+      .menu-cards { display: grid; gap: 16px; }
+      @media (min-width: 560px) { .menu-cards { grid-template-columns: 1fr 1fr; } }
+      .menu-card {
+        display: flex; flex-direction: column; gap: 8px; text-align: left;
+        background: var(--surface); border: 1.5px solid var(--line); border-radius: var(--radius);
+        padding: 22px 20px 20px; box-shadow: var(--shadow); min-height: 132px; width: 100%;
+      }
+      .menu-card:active { transform: scale(0.99); }
+      .menu-card .mc-head { display: flex; align-items: center; gap: 12px; }
+      .menu-card .mc-icon {
+        width: 52px; height: 52px; flex: none; border-radius: 14px;
+        display: grid; place-items: center;
+      }
+      .menu-card .mc-icon.green { background: var(--green-tint); color: var(--green); }
+      .menu-card .mc-icon.persimmon { background: var(--persimmon-tint); color: var(--persimmon); }
+      .menu-card .mc-title { font-family: "Zen Maru Gothic", sans-serif; font-weight: 900; font-size: 1.55rem; }
+      .menu-card .mc-sub { color: var(--ink-soft); font-size: 1rem; }
+      .menu-card .mc-sub strong { color: var(--ink); font-weight: 700; }
+      .menu-card .mc-arrow { margin-top: auto; color: var(--green); font-weight: 700; font-size: 0.98rem; }
+      .snapshot-note {
+        margin-top: 28px; padding: 14px 16px; background: var(--surface-soft);
+        border-radius: 12px; color: var(--ink-soft); font-size: 0.95rem;
+      }
+
+      /* ---------- generic nav ---------- */
+      .topbar { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+      .back-btn {
+        display: inline-flex; align-items: center; gap: 4px; min-height: 44px; padding: 8px 14px 8px 8px;
+        border-radius: 999px; border: 1.5px solid var(--line); background: var(--surface);
+        font-weight: 700; font-size: 1rem;
+      }
+      .topbar .spacer { flex: 1; }
+      .day-nav { display: flex; gap: 8px; }
+      .day-nav button {
+        min-width: 44px; min-height: 44px; border-radius: 999px; border: 1.5px solid var(--line);
+        background: var(--surface); font-weight: 700; font-size: 0.98rem; padding: 8px 12px;
+      }
+      .view-date { font-size: 1.7rem; font-weight: 900; }
+      .view-date .dow { font-size: 1.1rem; color: var(--green); }
+      .view-sub { color: var(--ink-soft); margin: 2px 0 18px; }
+
+      /* ---------- dish cards ---------- */
+      .dish-list { display: grid; gap: 14px; }
+      .dish-card {
+        display: flex; gap: 14px; align-items: stretch; width: 100%; text-align: left;
+        background: var(--surface); border: 1.5px solid var(--line); border-radius: var(--radius);
+        padding: 12px; box-shadow: var(--shadow); min-height: 104px;
+      }
+      .dish-card:active { transform: scale(0.995); }
+      .dish-thumb { width: 104px; height: 104px; flex: none; border-radius: 12px; overflow: hidden; position: relative; background: var(--surface-soft); }
+      .dish-thumb img { width: 100%; height: 100%; object-fit: cover; }
+      .dish-thumb .noimg {
+        width: 100%; height: 100%; display: grid; place-items: center;
+        font-family: "Zen Maru Gothic", sans-serif; font-weight: 900; font-size: 1.9rem; color: var(--green);
+        background: var(--green-tint);
+      }
+      .illus-badge {
+        position: absolute; right: 6px; bottom: 6px; background: rgba(30, 26, 22, 0.72); color: #fff;
+        font-size: 0.7rem; font-weight: 700; padding: 2px 7px; border-radius: 999px; line-height: 1.4;
+      }
+      .dish-body { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: center; gap: 6px; padding: 2px 2px 2px 0; }
+      .role-badge {
+        align-self: flex-start; font-size: 0.82rem; font-weight: 700; padding: 2px 10px; border-radius: 999px; line-height: 1.5;
+      }
+      .role-main { background: var(--persimmon-tint); color: var(--persimmon); }
+      .role-side { background: var(--green-tint); color: var(--green); }
+      .role-rice { background: var(--surface-soft); color: var(--ink-soft); }
+      .dish-name { font-family: "Zen Maru Gothic", sans-serif; font-weight: 700; font-size: 1.28rem; line-height: 1.4; }
+      .dish-more { color: var(--green); font-weight: 700; font-size: 0.92rem; }
+      .dish-card.static { cursor: default; }
+      .menu-note {
+        margin-top: 16px; padding: 14px 16px; border-radius: 12px; background: var(--surface-soft);
+        color: var(--ink-soft); font-size: 0.97rem;
+      }
+      .menu-note strong { color: var(--ink); }
+      .empty-box {
+        text-align: center; padding: 40px 20px; border: 1.5px dashed var(--line); border-radius: var(--radius);
+        color: var(--ink-soft);
+      }
+      .empty-box .big { font-family: "Zen Maru Gothic", sans-serif; font-weight: 900; font-size: 1.3rem; color: var(--ink); margin-bottom: 6px; }
+      .primary-btn {
+        display: inline-block; margin-top: 16px; min-height: 48px; padding: 10px 22px; border-radius: 999px;
+        background: var(--green); color: #fff; font-weight: 700; font-size: 1.02rem;
+      }
+      @media (prefers-color-scheme: dark) { .primary-btn { color: #14231a; } }
+      .recent-head { margin: 30px 0 12px; font-size: 1.25rem; font-weight: 900; }
+      .recent-head span { color: var(--ink-soft); font-family: "Noto Sans JP", sans-serif; font-weight: 500; font-size: 0.95rem; margin-left: 8px; }
+
+      /* ---------- calendar ---------- */
+      .cal-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+      .cal-title { font-family: "Zen Maru Gothic", sans-serif; font-weight: 900; font-size: 1.5rem; }
+      .cal-nav { display: flex; gap: 8px; }
+      .cal-nav button {
+        min-height: 44px; padding: 8px 14px; border-radius: 999px; border: 1.5px solid var(--line);
+        background: var(--surface); font-weight: 700;
+      }
+      .cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px; }
+      .cal-dow { text-align: center; font-weight: 700; font-size: 0.9rem; color: var(--ink-soft); padding: 4px 0; }
+      .cal-dow.sun { color: var(--sun); }
+      .cal-dow.sat { color: #3a6ea8; }
+      @media (prefers-color-scheme: dark) { .cal-dow.sat { color: #8fb6dd; } }
+      .cal-cell {
+        min-height: 74px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface);
+        padding: 5px 6px; text-align: left; display: flex; flex-direction: column; gap: 2px; width: 100%;
+      }
+      .cal-cell.blank { border: none; background: transparent; min-height: 0; }
+      .cal-cell .dnum { font-weight: 700; font-size: 0.98rem; line-height: 1.3; }
+      .cal-cell .dmain {
+        font-size: 0.68rem; line-height: 1.35; color: var(--ink-soft); font-weight: 500;
+        display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+      }
+      .cal-cell.has-menu { border-color: var(--green); }
+      .cal-cell.has-menu .dmain { color: var(--ink); }
+      .cal-cell.is-today { background: var(--green-tint); border-color: var(--green); box-shadow: inset 0 0 0 1.5px var(--green); }
+      .cal-cell .today-tag { font-size: 0.66rem; font-weight: 700; color: var(--green); }
+      .cal-list-head { margin: 26px 0 10px; font-size: 1.2rem; font-weight: 900; }
+      .cal-day-row {
+        display: flex; align-items: center; gap: 12px; width: 100%; text-align: left; min-height: 56px;
+        padding: 10px 14px; border: 1.5px solid var(--line); border-radius: 14px; background: var(--surface);
+        margin-bottom: 10px; box-shadow: var(--shadow);
+      }
+      .cal-day-row .rdate { font-weight: 900; font-family: "Zen Maru Gothic", sans-serif; white-space: nowrap; }
+      .cal-day-row .rmain { color: var(--ink-soft); min-width: 0; }
+      .cal-day-row .rmain strong { color: var(--ink); }
+
+      /* ---------- recipe ---------- */
+      .recipe-hero { border-radius: var(--radius); overflow: hidden; position: relative; margin-bottom: 18px; box-shadow: var(--shadow); }
+      .recipe-hero img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+      .recipe-title { font-size: 1.65rem; font-weight: 900; margin: 4px 0 8px; }
+      .recipe-meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 20px; }
+      .history-chip {
+        display: inline-flex; align-items: center; min-height: 40px; padding: 6px 14px; border-radius: 999px;
+        border: 1.5px solid var(--line); background: var(--surface); font-weight: 700; font-size: 0.95rem;
+      }
+      .sec-head { font-size: 1.3rem; font-weight: 900; margin: 26px 0 12px; padding-bottom: 6px; border-bottom: 2px solid var(--green-tint); }
+      table.ingredients { width: 100%; border-collapse: collapse; }
+      table.ingredients td { padding: 9px 6px; border-bottom: 1px solid var(--line); font-size: 1.05rem; }
+      table.ingredients td.amount { text-align: right; white-space: nowrap; font-weight: 500; padding-left: 16px; }
+      ol.steps { margin: 0; padding-left: 1.6em; display: grid; gap: 12px; }
+      ol.steps li { font-size: 1.05rem; padding-left: 4px; }
+      ol.steps li::marker { font-weight: 900; color: var(--green); }
+      .pending-box { padding: 18px; border-radius: 12px; background: var(--surface-soft); color: var(--ink-soft); }
+      .source-line { margin-top: 26px; color: var(--ink-soft); font-size: 0.97rem; }
+      .source-line a { color: var(--green); font-weight: 700; display: inline-block; padding: 6px 0; }
+      :focus-visible { outline: 3px solid var(--green); outline-offset: 2px; border-radius: 8px; }
+    
+      a.back-btn, a.history-chip { text-decoration: none; color: inherit; cursor: pointer; }
+    </style>
+  </head>
+  <body>
+    <main class="wrap" id="app"><div class="topbar"><a class="back-btn" href="../index.html">‹ 戻る</a></div><div class="recipe-hero"><img src="../img/236.jpg" alt="大根ときゅうりとハムのおかか和風サラダ" /></div><h1 class="recipe-title">大根ときゅうりとハムのおかか和風サラダ</h1><h2 class="sec-head">材料</h2><table class="ingredients"><tbody><tr><td>大根</td><td class="amount">1/2本（細切り）</td></tr><tr><td>きゅうり</td><td class="amount">2本（細切り）</td></tr><tr><td>ハム</td><td class="amount">100g（細切り）</td></tr><tr><td>かつお節</td><td class="amount">2パック（5g）</td></tr><tr><td>A（ドレッシング）</td><td class="amount"></td></tr><tr><td>醤油</td><td class="amount">大さじ3</td></tr><tr><td>酢</td><td class="amount">大さじ3</td></tr><tr><td>砂糖</td><td class="amount">大さじ1</td></tr><tr><td>すりごま</td><td class="amount">大さじ2</td></tr><tr><td>ごま油</td><td class="amount">大さじ2</td></tr><tr><td>仕上げのかつお節</td><td class="amount">お好みで</td></tr></tbody></table><h2 class="sec-head">作り方</h2><ol class="steps"><li>Aの材料を混ぜてドレッシングを作る。</li><li>大根、きゅうり、ハム、かつお節を和え、盛り付ける。</li><li>仕上げにかつお節を乗せる。</li><li>食べる直前にドレッシングを和えて完成。</li></ol><p class="source-line">出典：<a href="https://oceans-nadia.com/user/45109/recipe/372943" target="_blank" rel="noopener">Nadiaのレシピを見る</a></p></main>
+  </body>
+</html>
