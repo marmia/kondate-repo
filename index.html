@@ -221,7 +221,7 @@
     <script>
       "use strict";
 
-      /* ===== 献立データ（2026年11月23日時点） ===== */
+      /* ===== 献立データ（2026年11月25日時点） ===== */
       var MENUS = {
         "2026-10-27": { items: [
           { name: "長ねぎと豚肉のオイバター炒め", role: "main" },
@@ -311,6 +311,18 @@
           { name: "大根おろし", role: "side" },
           { name: "里芋の煮物", role: "side" },
           { name: "なめこと油揚げの味噌汁", role: "side" }
+        ] },
+        "2026-11-25": { items: [
+          { name: "麻婆豆腐", role: "main" },
+          { name: "春雨の中華風サラダ", role: "side" },
+          { name: "じゃがいものコンソメスープ", role: "side" },
+          { name: "かぼちゃの煮物", role: "side" }
+        ] },
+        "2026-11-26": { items: [
+          { name: "鮭の塩焼き", role: "main" },
+          { name: "野菜サラダ", role: "side" },
+          { name: "ほうれん草のごま和え", role: "side" },
+          { name: "卵スープ", role: "side" }
         ] }
       };
 
@@ -378,6 +390,9 @@
   },
   "親子丼": {
     "img": "img/399.webp"
+  },
+  "麻婆豆腐": {
+    "img": "img/396.jpg"
   },
   "きのこ鍋": {
     "img": "img/37.jpg"
@@ -1504,9 +1519,6 @@
   "麻婆茄子": {
     "img": "img/395.jpg"
   },
-  "麻婆豆腐": {
-    "img": "img/396.jpg"
-  },
   "黒ゴマ冷やし担々麺": {
     "img": "img/397.jpg"
   },
@@ -1562,8 +1574,9 @@
   "さんまの塩焼き": "recipes/56.html",
   "里芋の煮物": "recipes/351.html",
   "なめこと油揚げの味噌汁": "recipes/79.html",
-  "切り干し大根でサラダ": "recipes/206.html",
+  "麻婆豆腐": "recipes/396.html",
   "春雨の中華風サラダ": "recipes/257.html",
+  "切り干し大根でサラダ": "recipes/206.html",
   "豆腐とえのきのスープ": "recipes/318.html",
   "きのこ鍋": "recipes/37.html",
   "チキン南蛮": "recipes/401.html",
@@ -1921,7 +1934,6 @@
   "鶏釜めし": "recipes/393.html",
   "麻婆白菜": "recipes/394.html",
   "麻婆茄子": "recipes/395.html",
-  "麻婆豆腐": "recipes/396.html",
   "黒ゴマ冷やし担々麺": "recipes/397.html",
   "黒酢だれ肉団子": "recipes/398.html",
   "春巻き": "recipes/400.html",
@@ -2049,7 +2061,7 @@
           '<span class="mc-sub">' + p.y + "年" + p.m + '月の献立をカレンダーで見られます</span>' +
           '<span class="mc-arrow">カレンダーを開く ›</span></button>';
         html += "</div>";
-        html += '<p class="snapshot-note">このページは2026年11月23日時点の献立を表示しています。11月24日（火）までの献立が入っています。</p>';
+        html += '<p class="snapshot-note">このページは2026年11月25日時点の献立を表示しています。11月26日（木）までの献立が入っています。</p>';
         app.innerHTML = html;
       }
 
